@@ -1,7 +1,3 @@
-**MakeTimer.js**
-
-example usage:
-```
 // Example usage
 var MakeTimer = require("./MakeTimer");
 
@@ -23,4 +19,3 @@ function aTimedThing() {
 }
 
 thing()
-```
