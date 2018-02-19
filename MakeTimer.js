@@ -1,4 +1,5 @@
-function MakeTimer(){
+"use strict";
+function MakeTimer() {
   var t = {
     start: function(duration,func,callback) {
       this.func = func;
@@ -14,11 +15,25 @@ function MakeTimer(){
     stop: function(){
       clearTimeout(this.timer);
       return;
+    },
+    loop: function (duration,func,callback) {
+      this.timer = setInterval(function () {
+        func();
+        if (typeof callback === "function") {
+          callback();
+        }
+      }, duration);
+    },
+    halt: function () {
+      clearInterval(this.timer);
+      return;
     }
   };
   return {
     start: t.start,
-    stop: t.stop
+    stop: t.stop,
+    loop: t.loop,
+    halt: t.halt
   };
 }
 module.exports = MakeTimer;
