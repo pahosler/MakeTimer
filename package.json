@@ -1,6 +1,6 @@
 {
   "name": "maketimer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Slightly more sane setInterval and setTimeout",
   "main": "MakeTimer.js",
   "scripts": {

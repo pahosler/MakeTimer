@@ -20,7 +20,7 @@ function MakeTimer() {
       this.func = func;
       this.duration = duration;
       this.timer = setInterval(function () {
-        this.func();
+        func();
       }, this.duration);
     },
     halt: function () {
