@@ -1,3 +1,5 @@
+Installation: npm install maketimer --save
+
 **MakeTimer.js**
 
 example usage:
