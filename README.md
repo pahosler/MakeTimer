@@ -36,13 +36,6 @@ function aTimedThing() {
   count--;
 }
 
-function loopThing() {
-console.log("this is a loopy counter", looping);
-  if (looping < 5) {
-    looper.halt();
-  }
-}
-
 thing();
 loops();
 ```

@@ -16,13 +16,12 @@ function MakeTimer() {
       clearTimeout(this.timer);
       return;
     },
-    loop: function (duration,func,callback) {
+    loop: function (duration, func) {
+      this.func = func;
+      this.duration = duration;
       this.timer = setInterval(function () {
-        func();
-        if (typeof callback === "function") {
-          callback();
-        }
-      }, duration);
+        this.func();
+      }, this.duration);
     },
     halt: function () {
       clearInterval(this.timer);
